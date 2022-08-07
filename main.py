@@ -1,14 +1,18 @@
+import Calender as cld
 class Transaction:
   def __init__(myself, title, type, amount):
     myself.title = title
     myself.type = type
     myself.amount = amount
-
+  def print(self):
+    print("Title: "+self.title)
+    print("Type: "+self.type)
+    print("Amount: "+str(self.amount))
 class Month:
-  def __init__(myself, name, year):
-    myself.name = name
+  def __init__(myself, month, year):
+    myself.month = month
     myself.year = year
+    myself.transactions=[]
 
-  def myfunc(abc):
-    print("Hello my name is " + abc.name)
-
+temp = Transaction("my first transaction","credit",10400)
+temp.print()
